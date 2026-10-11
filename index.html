@@ -1,0 +1,79 @@
+<!-- Style pou bouton yo -->
+<style>
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Bouton Achte Diamants */
+  .btn-diamonds {
+    background-color: #2563eb; /* Ble */
+  }
+  .btn-diamonds:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* Bouton WhatsApp */
+  .btn-whatsapp {
+    background-color: #25D366; /* Vèt WhatsApp */
+  }
+  .btn-whatsapp:hover {
+    background-color: #1eb854;
+  }
+</style>
+
+<!-- Bouton yo -->
+<div class="btn-container">
+  
+  <!-- 1. Bouton Achte Diamants -->
+  <button class="btn btn-diamonds" onclick="achteDiamants()">
+    💎 Achte Diamants Free Fire
+  </button>
+
+  <!-- 2. Bouton WhatsApp -->
+  <button class="btn btn-whatsapp" onclick="kontakteWhatsApp()">
+    💬 Kontakte nou sou WhatsApp
+  </button>
+
+</div>
+
+<!-- Script pou bouton yo ka travay -->
+<script>
+  // Mete nimewo WhatsApp ou an la a (egzanp: 50931234567)
+  const monNumero = "50900000000";
+
+  function achteDiamants() {
+    const msg = "Bonjou EM TOP UP SHOP, mwen ta renmen achte Diamants Free Fire.";
+    window.open(`https://wa.me/${monNumero}?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  function kontakteWhatsApp() {
+    const msg = "Bonjou EM TOP UP SHOP, mwen gen yon kesyon pou nou.";
+    window.open(`https://wa.me/${monNumero}?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+</script>
