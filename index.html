@@ -79,3 +79,66 @@
     window.open(`https://wa.me/${monNumero}?text=${encodeURIComponent(msg)}`, '_blank');
   }
 </script>
+<!-- SEKSYON ACHTE DOLA ($ USD) -->
+<div class="card" style="border-top: 4px solid #16a34a;">
+  <h2>💵 Achte Dola ($ USD / Vityèl)</h2>
+  
+  <label for="usd-type">Kalite Dola ou vle achte :</label>
+  <select id="usd-type">
+    <option value="Dola sou Kat Mastercard/Visa">Dola sou Kat Vityèl (Mastercard / Visa)</option>
+    <option value="Dola Crypto / USDT (TRC20 / BEP20)">Dola Crypto / USDT</option>
+    <option value="Dola Merou / Payeer / Perfect Money">Dola e-Wallet (Merou / Payeer / Perfect Money)</option>
+    <option value="Dola Apple Pay / iTunes">Dola Apple Pay / Gift Card</option>
+  </select>
+
+  <label for="usd-account">Kont / Wallet / Email kote pou w resevwa dola an :</label>
+  <input type="text" id="usd-account" placeholder="Ex: Adrès Wallet, Email oswa ID Kont" required>
+
+  <label for="usd-phone">Numéro Téléphone WhatsApp ou :</label>
+  <input type="tel" id="usd-phone" placeholder="Ex: +509 3123 4567" required>
+
+  <label for="usd-amount">Montan Dola ou vle achte ($ USD) :</label>
+  <select id="usd-amount">
+    <option value="5$ USD">5$ USD</option>
+    <option value="10$ USD">10$ USD</option>
+    <option value="20$ USD">20$ USD</option>
+    <option value="50$ USD">50$ USD</option>
+    <option value="100$ USD">100$ USD</option>
+    <option value="200$ USD">200$ USD</option>
+  </select>
+
+  <label for="usd-payment">Mwayèn Peman :</label>
+  <select id="usd-payment">
+    <option value="Moncash">Moncash</option>
+    <option value="Natcash">Natcash</option>
+  </select>
+
+  <button onclick="commanderDola()" style="background-color: #16a34a;">Achte Dola sou WhatsApp</button>
+</div>
+
+<!-- SCRIPT JAVASCRIPT POUR FÈ BOUTON AN TRAVAY -->
+<script>
+  // Mete bon nimewo WhatsApp ou an la a
+  const monNumeroWhatsApp = "50940616775";
+const monNumeroWhatsApp = "50936219911";
+  function commanderDola() {
+    const typeDola = document.getElementById('usd-type').value;
+    const account = document.getElementById('usd-account').value;
+    const phone = document.getElementById('usd-phone').value;
+    const amount = document.getElementById('usd-amount').value;
+    const payment = document.getElementById('usd-payment').value;
+
+    if (!account) {
+      alert('Tanpri antre kont, email oswa adrès wallet kote pou w resevwa dola an.');
+      return;
+    }
+    if (!phone) {
+      alert('Tanpri antre nimewo WhatsApp ou.');
+      return;
+    }
+
+    const msg = `Bonjour EM TOP UP SHOP, je souhaite acheter des dollars :\n- Type de Dola : ${typeDola}\n- Montant : ${amount}\n- Recevoir sur (Compte/Wallet) : ${account}\n- Mon WhatsApp : ${phone}\n- Mode de paiement : ${payment}`;
+    
+    window.open(`https://wa.me/${monNumeroWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+</script>
